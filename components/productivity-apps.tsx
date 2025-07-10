@@ -11,7 +11,7 @@ export default function ProductivityApps() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {apps.map((app, index) => (
+        {apps.mustHave.map((app, index) => (
           <AppCard key={index} app={app} />
         ))}
       </div>
