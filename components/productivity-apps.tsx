@@ -2,12 +2,17 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Star } from "lucide-react"
 import { apps } from "@/lib/app-data"
+import ToolTypeHeroBadge from "./ToolTypeHeroBadge"
 
 export default function ProductivityApps() {
   return (
     <section className="px-4 py-16 max-w-7xl mx-auto">
       <div className="mb-8">
-        <Badge className="bg-red-500 hover:bg-red-600 text-white text-lg px-6 py-3 mb-8">Productivity</Badge>
+        <ToolTypeHeroBadge 
+          label="Productivity" 
+          className="bg-[#FE4D11] border-[#B1360F]" 
+          showComingSoon={false}
+        />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -28,74 +33,62 @@ interface App {
   setupSince: string
   delightMeter: number
   icon?: string
+  img?: string
 }
 
 function AppCard({ app }: { app: App }) {
-  const getDelightColor = (rating: number) => {
-    if (rating >= 9) return "text-green-600"
-    if (rating >= 7) return "text-yellow-600"
-    if (rating >= 5) return "text-orange-600"
-    return "text-red-600"
-  }
+  // Helper for delight meter color (simple rainbow gradient)
+  const getDelightGradient = () =>
+    "bg-gradient-to-r from-red-400 via-yellow-400 via-green-400 via-blue-400 to-pink-400";
+
+  // Capitalize the first letter of the useCase
+  const capitalizeFirst = (str?: string) =>
+    str ? str.charAt(0).toUpperCase() + str.slice(1) : '';
 
   return (
-    <Card className="bg-white/80 backdrop-blur-sm border-2 border-gray-200 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-      <CardContent className="p-6">
-        {/* App Icon & Name */}
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center text-white font-bold text-lg">
-            {app.icon || app.name.charAt(0)}
-          </div>
-          <h3 className="font-work-sans font-bold text-lg text-gray-900">{app.name}</h3>
+    <Card className="flex flex-col items-center bg-white/80 backdrop-blur-sm border-2 border-gray-200 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden p-6">
+      {/* App Image */}
+      <div className="flex justify-center w-full mb-2">
+        <img
+          src={`/app-images/${app.img}`}
+          alt={app.name}
+          className="w-32 h-32 object-contain border-gray-200 bg-white"
+        />
+      </div>
+      {/* App Name */}
+      <h3 className="font-work-sans font-medium text-3xl text-center text-gray-900 mb-4">{app.name}</h3>
+      {/* For When Section (styled to match reference) */}
+      <div className="w-full flex justify-center mb-8 relative">
+        <div className="absolute text-center w-full font-work-sans font-semibold text-sm rounded-tr-lg rounded-tl-lg h-5 bg-[#EEEDEB] text-[#9e9c99]">
+          For When:
         </div>
-
-        {/* Description */}
-        <p className="font-work-sans text-sm text-gray-700 mb-4 leading-relaxed">{app.description}</p>
-
-        {/* Use Case */}
-        <div className="mb-4">
-          <h4 className="font-work-sans font-semibold text-xs text-gray-500 uppercase tracking-wide mb-2">
-            More thoughts on this...
-          </h4>
-          <p className="font-work-sans text-xs text-gray-600 leading-relaxed">{app.useCase}</p>
+        <div className="w-full rounded-2xl border border-black/10 p-4 pb-2 pt-6 text-center font-crimson text-xl leading-tight">
+          {capitalizeFirst(app.useCase)}
         </div>
-
-        {/* Features */}
-        {app.features.length > 0 && (
-          <div className="mb-4">
-            <ul className="space-y-1">
-              {app.features.slice(0, 2).map((feature, idx) => (
-                <li key={idx} className="font-work-sans text-xs text-gray-600 leading-relaxed">
-                  • {feature}
-                </li>
+      </div>
+      {/* Features (More thoughts...) */}
+      {/* {app.features && app.features.length > 0 && (
+        <div className="w-full flex justify-center mb-8">
+          <div className="w-full bg-gray-50 border-2 border-dashed border-gray-300 rounded-xl p-4">
+            <span className="block text-center italic font-semibold text-gray-500 text-lg tracking-wide">MORE THOUGHTS ON THIS...</span>
+            <ul className="mt-2 space-y-1">
+              {app.features.map((feature, idx) => (
+                <li key={idx} className="text-center text-gray-700 text-base">{feature}</li>
               ))}
             </ul>
           </div>
-        )}
-
-        {/* Tags */}
-        <div className="flex flex-wrap gap-1 mb-4">
-          {app.tags.map((tag, idx) => (
-            <Badge key={idx} variant="secondary" className="text-xs px-2 py-1 bg-gray-100 text-gray-700">
-              {tag}
-            </Badge>
-          ))}
         </div>
-
-        {/* Setup Since */}
-        <p className="font-work-sans text-xs text-gray-500 mb-3">On my Setup Since {app.setupSince}</p>
-
-        {/* Delight Meter */}
-        <div className="flex items-center justify-between">
-          <span className="font-work-sans text-xs text-gray-500">Delight Meter</span>
-          <div className="flex items-center gap-1">
-            <Star className={`w-4 h-4 ${getDelightColor(app.delightMeter)} fill-current`} />
-            <span className={`font-work-sans font-bold text-sm ${getDelightColor(app.delightMeter)}`}>
-              {app.delightMeter}/10
-            </span>
-          </div>
+      )} */}
+      {/* Delight Meter */}
+      <div className="w-full mt-auto">
+        <div className="flex items-center justify-between px-4 mb-1">
+          <span className="font-semibold italic text-white bg-gray-800 rounded-full px-3 py-1 text-xs">Delight-O-Meter</span>
+          <span className="font-bold text-white bg-gray-800 rounded-full px-3 py-1 text-xs">{app.delightMeter}/10</span>
         </div>
-      </CardContent>
+        <div className={`h-4 w-full rounded-full ${getDelightGradient()} border-2 border-gray-300`}>
+          {/* Optionally, you could fill the bar proportionally to delightMeter */}
+        </div>
+      </div>
     </Card>
-  )
+  );
 }

@@ -1,4 +1,3 @@
-"use client"
 import ToolTypeHeroBadge from "./ToolTypeHeroBadge"
 import EveryoneWavyUnderline from "./EveryoneWavyUnderline"
 

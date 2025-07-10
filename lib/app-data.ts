@@ -3,7 +3,7 @@ export const apps = {
     {
       name: "Raycast",
       description: "That emoji picker takes 2 years to load and you've got things to say.",
-      useCase: "For when that emoji picker takes 2 years to load and you've got things to say.",
+      useCase: "that emoji picker takes 2 years to load and you've got things to say.",
       features: [
         "Opt + Space: search emojis instantly",
         "Cmd + Space + C: summon the color picker",
@@ -20,7 +20,7 @@ export const apps = {
     {
       name: "CleanShot X",
       description: "Pinning things to your screen, taking and annotating screenshots, sharing your screenshots with a personal domain.",
-      useCase: "For when you need that screenshot to stick around longer than a second.",
+      useCase: "you need that screenshot to stick around longer than a second.",
       features: [
         "Cmd + Shift + 2: extract text from any part of the screen",
         "Cmd + Shift + 4: take + annotate screenshots, save as reusable design docs",
@@ -36,7 +36,7 @@ export const apps = {
     {
       name: "Bartender",
       description: "Organizing your menu bar.",
-      useCase: "For when your menu bar looks like Times Square and you just want peace.",
+      useCase: "your menu bar looks like Times Square and you just want peace.",
       features: [
         "Organizing menu bar icons into primary/secondary rows",
         "Adding spacers for clarity",
@@ -51,7 +51,7 @@ export const apps = {
     {
       name: "One Switch",
       description: "Quick toggles for common system actions.",
-      useCase: "For when you need to wipe your computer down but don't want to shut down your whole universe to do it.",
+      useCase: "you need to wipe your computer down but don't want to shut down your whole universe to do it.",
       features: [
         "Quick toggles: show hidden files, enable screen clean mode, prevent sleep",
         "Amphetamine is a solid free alternative"
@@ -65,7 +65,7 @@ export const apps = {
     {
       name: "SideNotes",
       description: "Best place for taking quick notes on your computer.",
-      useCase: "For when you need to jot something down right now.",
+      useCase: "you need to jot something down right now.",
       features: [
         "My primary quick-thought-capture app",
         "Has folders + markdown, but keeps things calm and low-pressure",
@@ -80,7 +80,7 @@ export const apps = {
     {
       name: "Fantastical",
       description: "A better calendar app for personal events and natural language entry.",
-      useCase: "For when you just want to add something to your calendar like a human.",
+      useCase: "you just want to add something to your calendar like a human.",
       features: [
         "My primary calendar app for personal events",
         "Natural language event entry in the menubar saves me ungodly amounts of time",
@@ -95,7 +95,7 @@ export const apps = {
     {
       name: "Unclutter",
       description: "A smart junk drawer for notes, clips, and screenshots.",
-      useCase: "For when you need a smart junk drawer for notes, clips, and screenshots.",
+      useCase: "you need a smart junk drawer for notes, clips, and screenshots.",
       features: [
         "Clipboard history: saves me daily oopsies",
         "Drag-and-drop file stash: where all my screenshots go",
@@ -110,7 +110,7 @@ export const apps = {
     {
       name: "Downie",
       description: "Download videos from sites that don't want you to.",
-      useCase: "For when you need to download something… and the site really doesn't want you to.",
+      useCase: "you need to download something… and the site really doesn't want you to.",
       features: [
         "Downloading YouTube videos, audio clips, and Instagram posts",
         "Works like magic on stuff with no download button"
@@ -124,7 +124,7 @@ export const apps = {
     {
       name: "Rectangle",
       description: "Organize your windows to the sides of your screen.",
-      useCase: "For when you want side-by-side apps without the awkward gaps.",
+      useCase: "you want side-by-side apps without the awkward gaps.",
       features: [
         "Window snapping, tiling, and full-screening without full-screen mode",
         "Rectangle + Mission Control = elite multitasking"
@@ -141,7 +141,7 @@ export const apps = {
     {
       name: "Craft",
       description: "Share your thoughts or essays with a bit more… craft.",
-      useCase: "For when you want to share your thoughts – but with a little more… craft.",
+      useCase: "you want to share your thoughts – but with a little more… craft.",
       features: [
         "Sharing essays and notes that I write for individual people (not the web)",
         "Beautiful, editable docs with actual design sense",
@@ -156,7 +156,7 @@ export const apps = {
     {
       name: "DevUtils",
       description: "A fast, local Swiss army knife for developers (QR, JSON, and more).",
-      useCase: "For when you need a QR code fast, and you're not interested in meeting a cookie banner first.",
+      useCase: "you need a QR code fast, and you're not interested in meeting a cookie banner first.",
       features: [
         "Generating QR codes, coloring JSON, color tools",
         "A Swiss army knife of dev utilities – super fast, local, and no BS"
@@ -170,7 +170,7 @@ export const apps = {
     {
       name: "Diagrams",
       description: "Constraint-driven, beautiful flowcharts and diagrams.",
-      useCase: "For when you need a diagram that doesn't look like sad spaghetti.",
+      useCase: "you need a diagram that doesn't look like sad spaghetti.",
       features: [
         "Clean, constraint-driven flowcharts and diagrams",
         "You can't make an ugly one – it enforces beautiful structure",
@@ -185,7 +185,7 @@ export const apps = {
     {
       name: "Glyphs Mini",
       description: "Design your own fonts, from blank slate to finished typeface.",
-      useCase: "For when you want to make a font and live your typographic dreams.",
+      useCase: "you want to make a font and live your typographic dreams.",
       features: [
         "Designing fonts from scratch, copy and paste things in from Illustrator",
         "Made two fonts inspired by 1990s–2000s certificates 👉 Download them here"
@@ -199,7 +199,7 @@ export const apps = {
     {
       name: "QuickLens",
       description: "Measure and align on-screen elements with ease.",
-      useCase: "For when you want to see if two things align without grabbing a physical ruler.",
+      useCase: "you want to see if two things align without grabbing a physical ruler.",
       features: [
         "Screen overlays for alignment, guides, and spacing",
         "Basically physical design tools, but designed for your screen"
@@ -227,7 +227,7 @@ export const apps = {
     {
       name: "Teleprompter App",
       description: "Read scripts for video—smooth, simple, and stress-free.",
-      useCase: "For when you need to read a script for a video without losing your place.",
+      useCase: "you need to read a script for a video without losing your place.",
       features: [
         "Displays your script as a scrolling teleprompter",
         "Configurable speed, size, and easy to keep eye contact",
@@ -245,7 +245,7 @@ export const apps = {
     {
       name: "IINA",
       description: "A modern media player for Mac that feels as good as it works.",
-      useCase: "For when you want to watch a video on your Mac and actually enjoy the experience before pressing play.",
+      useCase: "you want to watch a video on your Mac and actually enjoy the experience before pressing play.",
       features: [
         "A modern media player that doesn't feel like it was built in 2004",
         "Plays anything you throw at it – subs, speed control, audio tweaks, all of it",
@@ -260,7 +260,7 @@ export const apps = {
     {
       name: "Permute",
       description: "Swiss Army encoder for all your media conversion needs.",
-      useCase: "For when you need to convert one thing into another thing so you can upload it to the right thing.",
+      useCase: "you need to convert one thing into another thing so you can upload it to the right thing.",
       features: [
         "Extracting audio from videos",
         "Resizing GIFs and compressing video",
@@ -275,7 +275,7 @@ export const apps = {
     {
       name: "coconutBattery",
       description: "Monitor your Mac and iOS battery health at a glance.",
-      useCase: "For when you need to know if your battery is dying – or if it's just you.",
+      useCase: "you need to know if your battery is dying – or if it's just you.",
       features: [
         "Quick check on battery health, cycles, and age",
         "Plug in your iPhone/iPad to check those, too",
@@ -290,7 +290,7 @@ export const apps = {
     {
       name: "PDF Search",
       description: "Powerful full-text PDF search for exams, projects, and reference.",
-      useCase: "For when you're taking an open-book exam and need to summon knowledge like Dumbledore.",
+      useCase: "you're taking an open-book exam and need to summon knowledge like Dumbledore.",
       features: [
         "Instantly searches across all PDFs in one place",
         "Built for exams, take-homes, and panic-mode referencing",
@@ -305,7 +305,7 @@ export const apps = {
     {
       name: "PDF Squeezer",
       description: "Compress PDFs with control over quality vs. size.",
-      useCase: "For when you just exported a chonky PDF and are ashamed to send it that way.",
+      useCase: "you just exported a chonky PDF and are ashamed to send it that way.",
       features: [
         "Magically compresses PDFs to a fraction of the size",
         "Gives you control over quality vs. size",
@@ -320,7 +320,7 @@ export const apps = {
     {
       name: "TripMode",
       description: "Blocks unnecessary data usage on metered Wi-Fi or hotspots.",
-      useCase: "For when you're on airplane Wi-Fi and your grandma's iMessage cat meme is eating all your bandwidth.",
+      useCase: "you're on airplane Wi-Fi and your grandma's iMessage cat meme is eating all your bandwidth.",
       features: [
         "Blocks apps from using data when on metered Wi-Fi or a hotspot.",
         "Auto-remembers your settings for next time",
@@ -335,7 +335,7 @@ export const apps = {
     {
       name: "Vivid",
       description: "Make your Mac screen super bright or super dim.",
-      useCase: "For when your screen's default brightness just isn't cutting it.",
+      useCase: "your screen's default brightness just isn't cutting it.",
       features: [
         "Unlocks turbo bright mode for sunny cafés.",
         "Lets you go below 1 bar brightness for midnight coding next to sane people.",
@@ -350,7 +350,7 @@ export const apps = {
     {
       name: "AppCleaner",
       description: "Fully uninstall apps and associated junk files.",
-      useCase: "For when you tried one of these apps and realized… not everything sparks joy.",
+      useCase: "you tried one of these apps and realized… not everything sparks joy.",
       features: [
         "Lightweight tool for fully uninstalling apps",
         "Deletes all associated junk files in a click",
@@ -365,7 +365,7 @@ export const apps = {
     {
       name: "CleanMyMac",
       description: "Comprehensive cleaning, monitoring, and malware scanning for Mac.",
-      useCase: "For when your laptop feels like the sun – and you don't know why.",
+      useCase: "your laptop feels like the sun – and you don't know why.",
       features: [
         "Storage, CPU, memory, and network monitoring",
         "Malware scans and system cleanups",
@@ -380,7 +380,7 @@ export const apps = {
     {
       name: "Hand Mirror",
       description: "A fast little menubar mirror to check yourself before meetings.",
-      useCase: "For when you need to check your hair before a meeting—but opening Photo Booth is a cry for help.",
+      useCase: "you need to check your hair before a meeting—but opening Photo Booth is a cry for help.",
       features: [
         "Exactly what it says: a fast little mirror",
         "Lives in the menubar",

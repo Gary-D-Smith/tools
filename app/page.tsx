@@ -1,3 +1,4 @@
+"use client"
 import { Work_Sans as WorkSans, Crimson_Pro as CrimsonPro } from "next/font/google"
 import Hero from "@/components/hero"
 import ProductivityApps from "@/components/productivity-apps"

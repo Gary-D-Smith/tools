@@ -55,7 +55,7 @@ const ToolTypeHeroBadge: React.FC<ToolTypeHeroBadgeProps> = ({
         {/* Exclamation mark background */}
         <span
           aria-hidden
-          className="absolute right-1 top-1/2 -translate-y-1/2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white/25 font-medium italic pointer-events-none select-none"
+          className="absolute right-1 top-5 xl:top-6 -translate-y-1/2 text-2xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl text-white/25 font-medium italic pointer-events-none select-none"
         >
           !
         </span>
