@@ -5,15 +5,13 @@ interface ToolTypeHeroBadgeProps {
   className: string; // Tailwind classes
   showComingSoon?: boolean; // Whether to show "Coming soon" tooltip
   glowColor?: string; // Glow color for hover effect
-  href?: string; // Optional href for navigation
 }
 
 const ToolTypeHeroBadge: React.FC<ToolTypeHeroBadgeProps> = ({ 
   label, 
   className, 
   showComingSoon = true,
-  glowColor = "#000000", // Default fallback
-  href
+  glowColor = "#000000" // Default fallback
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -44,27 +42,17 @@ const ToolTypeHeroBadge: React.FC<ToolTypeHeroBadgeProps> = ({
 
   const exclamationColor = mixWithWhite(glowColor, 25);
 
-  const handleClick = () => {
-    if (href) {
-      const element = document.getElementById(href.replace('#', ''));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
-
   return (
     <div className="relative">
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onMouseMove={handleMouseMove}
-        onClick={handleClick}
         className={`
-          inline-block font-work-sans font-semibold text-white rounded-lg shadow-md overflow-hidden 
+          inline-block font-work-sans font-semibold text-white rounded-xl shadow-md overflow-visible 
           transition-all duration-300 ease-out cursor-pointer select-none
           hover:scale-105 sm:hover:scale-110 hover:shadow-2xl z-20
-          px-3 py-1 sm:px-4 sm:py-1.5 md:px-5 md:py-2 lg:px-6 lg:py-2 border-2 sm:border-3 md:border-4 text-lg sm:text-xl md:text-2xl lg:text-3xl rounded-lg sm:rounded-xl
+          px-5 py-2 lg:px-6 lg:py-3 border-4 text-4xl sm:text-4xl md:text-4xl lg:text-5xl
           ${className}
         `}
         style={{
@@ -73,32 +61,21 @@ const ToolTypeHeroBadge: React.FC<ToolTypeHeroBadgeProps> = ({
             : undefined
         }}
       >
-        {/* Exclamation mark background */}
-        <span
-          aria-hidden
-          className="absolute right-1 top-5 xl:top-6 -translate-y-1/2 font-medium italic pointer-events-none select-none text-2xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl"
-          style={{ color: exclamationColor }}
-        >
-          !
-        </span>
         {/* Label */}
-        <span className="relative z-10">{label}</span>
+        <span className="relative z-10">
+            {label}
+
+             {/* Exclamation mark background */}
+            <span
+            aria-hidden
+            className="absolute -right-6 -bottom-2 font-semibold italic pointer-events-none select-none text-7xl lg:text-8xl xl:text-8xl"
+            style={{ color: exclamationColor }}
+            >
+            !
+            </span>
+        </span>
       </div>
 
-      {/* Custom "Coming soon" tooltip that tracks cursor */}
-      {showComingSoon && isHovered && (
-        <div
-          className="fixed z-50 pointer-events-none"
-          style={{
-            left: mousePosition.x + 20,
-            top: mousePosition.y - 40,
-          }}
-        >
-          <div className="bg-white text-black px-2 py-1 sm:px-3 sm:py-2 rounded-lg shadow-lg border border-gray-200 font-work-sans font-medium text-xs sm:text-sm whitespace-nowrap">
-            Coming Soon!
-          </div>
-        </div>
-      )}
     </div>
   );
 };

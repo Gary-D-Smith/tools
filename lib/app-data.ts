@@ -86,7 +86,7 @@ export const apps = {
         "Natural language event entry in the menubar saves me ungodly amounts of time",
         "Setup is a bit much, and I still use Google Calendar for scheduling, but Fantastical is home for me."
       ],
-      tags: ["Freemium"],
+      tags: ["Free"],
       setupSince: "2017",
       delightMeter: 10,
       site: "https://flexibits.com/fantastical",
@@ -101,7 +101,7 @@ export const apps = {
         "Drag-and-drop file stash: where all my screenshots go",
         "Notes pane: long-term parking for ideas that don't need SideNotes"
       ],
-      tags: ["Paid"],
+      tags: ["Setapp"],
       setupSince: "2019",
       delightMeter: 10,
       site: "https://unclutterapp.com",
@@ -147,7 +147,7 @@ export const apps = {
         "Beautiful, editable docs with actual design sense",
         "Like Notion, but with ✨ taste ✨"
       ],
-      tags: ["Freemium", "Setapp"],
+      tags: ["Free", "Setapp"],
       setupSince: "2024",
       delightMeter: 10,
       site: "https://craft.do",
