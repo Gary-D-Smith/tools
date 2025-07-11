@@ -246,4 +246,4 @@ export default function AppCard({ app }: AppCardProps) {
   );
 }
 
-export type { App } 
+export type { App }
