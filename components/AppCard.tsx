@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card"
 import { FiCalendar } from "react-icons/fi";
+import { FiStar } from "react-icons/fi";
 
 interface App {
   name: string
@@ -12,6 +13,7 @@ interface App {
   icon?: string
   img?: string
   site?: string
+  favorite?: boolean
 }
 
 interface AppCardProps {
@@ -20,17 +22,42 @@ interface AppCardProps {
 
 const FreeTag = () => {
   return (
-    <div className="border-2 border-[#27BB5D] text-[#27BB5D] opacity-80 font-work-sans font-medium text-[11px] px-2 py-0 rounded-full whitespace-nowrap">
-      FREE
+    <div className="group relative">
+      <div className="border-2 border-[#27BB5D] text-[#27BB5D] opacity-80 font-work-sans font-medium text-[11px] px-2 py-0 rounded-full whitespace-nowrap cursor-pointer">
+        FREE
+      </div>
+      {/* Tooltip */}
+      <div className="w-20 absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-2 bg-white/95 text-gray-800 text-xs font-work-sans rounded-lg shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-30 pointer-events-none">
+        <div className="text-center flex items-center justify-center gap-1">
+          <span>yay!</span>
+          <img src="/cat.gif" alt="Happy cat" className="w-3 h-3" />
+        </div>
+        {/* Tooltip arrow */}
+        <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white"></div>
+      </div>
     </div>
   )
 }
 
 const SetappTag = () => {
   return (
-    <div className="border-2 border-gray-300 text-gray-500 opacity-80 font-work-sans font-medium text-[11px] px-2 py-0 rounded-full whitespace-nowrap flex items-center gap-1">
-      <img src="/setapp-icon.png" alt="Setapp" className="w-3 h-3" />
-      <span>Setapp</span>
+    <div className="group relative">
+      <a 
+        href="https://setapp.com" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="border-2 border-gray-300 text-gray-500 opacity-80 font-work-sans font-medium text-[11px] px-2 py-0 rounded-full whitespace-nowrap flex items-center gap-1 cursor-pointer hover:opacity-100 transition-opacity duration-200"
+      >
+        <img src="/setapp-icon.png" alt="Setapp" className="w-3 h-3" />
+        <span>Setapp</span>
+      </a>
+      {/* Tooltip */}
+      <div className="w-44 absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-2 bg-white/95 text-gray-800 text-xs font-work-sans rounded-lg shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-30 pointer-events-none">
+        <div className="text-center mb-1 leading-tight">Setapp is like Netflix for productivity apps.</div>
+        <div className="text-center font-semibold">Explore More! ⬇︎</div>
+        {/* Tooltip arrow */}
+        <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white"></div>
+      </div>
     </div>
   )
 }
@@ -77,7 +104,25 @@ export default function AppCard({ app }: AppCardProps) {
     <Card className="flex flex-col items-center bg-white/80
     backdrop-blur-sm border-2 border-[#B4B0A8] rounded-3xl
     shadow-lg hover:shadow-xl transition-all duration-300
-    hover:-translate-y-1 overflow-hidden p-6 pb-2 max-w-sm relative">
+    hover:scale-[102%] p-6 pb-2 max-w-sm relative">
+      {/* Star icon in top right if favorited */}
+      {app.favorite && (
+        <div className="absolute rotate-6 -top-4 -right-4 z-20 group">
+            <img 
+              src="/star.svg" 
+              alt="Favorite" 
+              className="w-11 h-11 transition-all duration-500 ease-out
+              hover:rotate-180 transform-gpu cursor-pointer" 
+            />
+            {/* Tooltip */}
+            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-white/95 text-gray-800 text-sm font-work-sans rounded-lg shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500 whitespace-nowrap z-30 pointer-events-none">
+              This is one of Gary's all-time favorites!
+              {/* Tooltip arrow */}
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white"></div>
+            </div>
+        </div>
+      )}
+
       {/* Tags positioned in top left */}
       <div className="absolute top-4 left-4 flex flex-col gap-1 z-10 items-start">
         {renderTags()}
@@ -142,13 +187,31 @@ export default function AppCard({ app }: AppCardProps) {
         <div className="w-full flex items-center justify-center mb-1 gap-2 font-work-sans">
           <span className="italic font-semibold text-[#5B5B5B] text-md">On My Setup Since:</span>
           <span className="flex items-center gap-1">
-            <span className="text-white bg-[#8E8C8C] font-bold px-2 py-0 rounded-md tracking-wide shadow-inner text-sm">{app.setupSince}</span>
+            <span 
+              className={`font-bold px-2 py-0 rounded-md tracking-wide shadow-inner text-sm opacity-70 ${
+                app.setupSince === '2019' 
+                  ? 'text-white bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 shadow-lg' // Amber
+                  : app.setupSince === '2020'
+                  ? 'text-white bg-gradient-to-r from-gray-300 via-gray-400 to-gray-500 shadow-lg' // Grey
+                  : app.setupSince === '2021'
+                  ? 'text-white bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 shadow-lg' // Amber
+                  : app.setupSince === '2022'
+                  ? 'text-white bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 shadow-lg' // Amber
+                  : app.setupSince === '2023'
+                  ? 'text-white bg-gradient-to-r from-gray-300 via-gray-400 to-gray-500 shadow-lg' // Grey
+                  : app.setupSince === '2024'
+                  ? 'text-white bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 shadow-lg' // Amber
+                  : 'text-white bg-[#8E8C8C]' // Default gray for other years
+              }`}
+            >
+              {app.setupSince}
+            </span>
           </span>
         </div>
 
         {/* Delight Meter */}
-        <div className="w-[110%] flex flex-col items-center">
-          <div className="w-full bg-[#5B5B5B] rounded-2xl rounded-b-xl pb-1 px-1 flex flex-col shadow-inner">
+        <div className="w-[110%] flex flex-col items-center group relative">
+          <div className="w-full bg-[#5B5B5B] rounded-2xl rounded-b-xl pb-1 px-1 flex flex-col shadow-inner cursor-pointer">
             <div className="flex items-center justify-between mb-1 text-sm font-crimson italic text-white px-4">
               <span className=" text-[15px]">Delight-O-Meter</span>
               <div className="flex-1 h-px bg-white mx-2"></div>
@@ -156,6 +219,12 @@ export default function AppCard({ app }: AppCardProps) {
                 <span className="font-semibold">{app.delightMeter}</span>
                 <span> / 10</span>
               </span>
+            </div>
+            {/* Tooltip */}
+            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-white/95 text-gray-800 text-xs font-work-sans rounded-lg shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-30 pointer-events-none w-48">
+              <div className="text-center leading-tight">Real-world joy rating. ✨</div>
+              {/* Tooltip arrow */}
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white"></div>
             </div>
             <div className="w-full h-4 bg-white rounded-full flex items-center border-4 border-white relative overflow-hidden">
               <div

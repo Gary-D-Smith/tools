@@ -57,9 +57,9 @@ export default function Hero() {
         </div>
 
         {/* Main Content */}
-        <div className="relative z-20 flex flex-col justify-between items-center w-full max-w-3xl min-h-[70vh] lg:min-h-[80vh] mx-auto pointer-events-none">
+        <div className="relative z-20 flex flex-col justify-between items-center w-full max-w-3xl mx-auto">
           {/* Headline - centered vertically */}
-          <div className="flex-1 flex flex-col justify-center items-center pt-16">
+          <div className="flex flex-col justify-center items-center mt-16">
             <h1 className="text-black leading-tight flex flex-col items-center gap-4">
               <span className="font-crimson font-medium text-6xl md:text-7xl lg:text-8xl">
                 Why isn't
@@ -101,15 +101,35 @@ export default function Hero() {
           </div>
 
           {/* Supporting Text - always at the bottom of the hero */}
-          <div className="flex flex-col items-center gap-2 w-full max-w-[25rem] md:max-w-md px-4">
+          <div className="flex flex-col items-center gap-2 w-full max-w-[25rem] md:max-w-md px-4 pt-20 -mb-20">
             <div className="bg-black/60 text-white px-6 py-4 rounded-2xl inline-block mb-2 shadow-lg">
               <p className="font-work-sans font-medium italic text-lg md:text-xl text-center">
                 Thoughtfully chosen tools for a more intentional & joyful digital life.
               </p>
             </div>
-            <p className="font-crimson font-medium text-black/60 text-lg italic">
-              A Collection by Gary Smith
-            </p>
+            <div className="group relative pointer-events-auto">
+              <a 
+                href="https://garysmith.me" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="font-crimson font-medium text-black/60 text-lg italic cursor-pointer hover:text-black/80 transition-colors duration-200"
+              >
+                <span className="relative">
+                  A Collection by Gary Smith
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black/60 group-hover:w-full transition-all duration-300 ease-out"></span>
+                </span>
+              </a>
+              {/* Tooltip */}
+              <div className="absolute bottom-full left-1/2 transform translate-x-8 mb-2 px-3 py-2 bg-white/95 text-gray-800 text-sm font-work-sans rounded-lg shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-30 pointer-events-none">
+                <div className="text-center">
+                  <span className="font-semibold">Say Hi! 👋</span>
+                </div>
+                {/* Tooltip arrow */}
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white"></div>
+                {/* Pointing image */}
+                <img src="/point.png" alt="Pointing" className="absolute -top-9 left-1/2 transform -translate-x-1/2 h-10" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
