@@ -53,7 +53,7 @@ export const apps = {
       features: [
         "Extracting audio from videos",
         "Resizing GIFs and compressing video",
-        "Turning anything into everything else — like a Swiss Army encoder"
+        "Turning anything into everything else -- like a Swiss Army encoder"
       ],
       tags: ["Setapp", "Paid"],
       setupSince: "2019",
@@ -192,7 +192,7 @@ export const apps = {
     {
       name: "Hand Mirror",
       description: "A fast little menubar mirror to check yourself before meetings.",
-      useCase: "you need to check your hair before a meeting—but opening Photo Booth is a cry for help.",
+      useCase: "you need to check your hair before a meeting, but opening Photo Booth is a cry for help.",
       features: [
         "Exactly what it says: a fast little mirror",
         "Lives in the menubar",

@@ -142,7 +142,7 @@ export default function AppCard({ app }: AppCardProps) {
             <img
               src={`/app-images/${app.img}`}
               alt={app.name}
-              className="w-28 h-38 object-contain border-gray-200 bg-white 
+              className="w-28 h-38 object-contain 
               transition-all duration-300 ease-in-out
               group-hover:scale-110 group-hover:rotate-3
               cursor-pointer"
@@ -152,7 +152,7 @@ export default function AppCard({ app }: AppCardProps) {
           <img
             src={`/app-images/${app.img}`}
             alt={app.name}
-            className="w-28 h-38 object-contain border-gray-200 bg-white"
+            className="w-28 h-38 object-contain"
           />
         )}
       </div>
