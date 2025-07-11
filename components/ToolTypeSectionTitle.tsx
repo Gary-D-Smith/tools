@@ -43,7 +43,7 @@ const ToolTypeHeroBadge: React.FC<ToolTypeHeroBadgeProps> = ({
   const exclamationColor = mixWithWhite(glowColor, 25);
 
   return (
-    <div className="relative">
+    <div className="relative overflow-visible ">
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}

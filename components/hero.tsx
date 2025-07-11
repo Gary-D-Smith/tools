@@ -44,13 +44,13 @@ export default function Hero() {
           />
           <ToolTypeHeroBadge
             label={tags[4].name}
-            className={`${tags[4].color} absolute left-[15%] rotate-[-3deg] top-[5vh] md:left-[22%] lg:left-[25%] lg:rotate-[-3deg] lg:top-[8vh]`}
+            className={`${tags[4].color} absolute left-[13%] rotate-[-3deg] top-[5vh] md:left-[22%] lg:left-[25%] lg:rotate-[-3deg] lg:top-[8vh]`}
             showComingSoon={true}
             glowColor={tags[4].glowColor}
           />
           <ToolTypeHeroBadge
             label={tags[5].name}
-            className={`${tags[5].color} absolute right-[15%] rotate-[3deg] top-[5vh] md:right-[22%] lg:right-[25%] lg:rotate-[3deg] lg:top-[8vh]`}
+            className={`${tags[5].color} absolute right-[13%] rotate-[3deg] top-[5vh] md:right-[22%] lg:right-[25%] lg:rotate-[3deg] lg:top-[8vh]`}
             showComingSoon={true}
             glowColor={tags[5].glowColor}
           />
