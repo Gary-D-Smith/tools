@@ -58,7 +58,7 @@ export const apps = {
       tags: ["Setapp", "Paid"],
       setupSince: "2019",
       delightMeter: 5,
-      site: "https://software.charliemonroes.com/permute",
+      site: "https://software.charliemonroe.net/permute/",
       img: "permute.png"
     },
     {
@@ -88,7 +88,7 @@ export const apps = {
       tags: ["Paid", "Setapp"],
       setupSince: "2021",
       delightMeter: 6,
-      site: "https://pdfsqueezer.com",
+      site: "https://setapp.com/apps/pdf-squeezer",
       img: "pdfsqueezer.png"
     },
     {
@@ -246,7 +246,7 @@ export const apps = {
       tags: ["Setapp", "Paid"],
       setupSince: "2019",
       delightMeter: 6,
-      site: "https://software.charliemonroes.com/downie",
+      site: "https://software.charliemonroe.net/downie/",
       img: "downie.png"
     },
     {
@@ -381,7 +381,7 @@ export const apps = {
       tags: ["Setapp", "Paid"],
       setupSince: "2023",
       delightMeter: 5,
-      site: "https://wifisignal.app",
+      site: "https://setapp.com/apps/wifi-signal",
       img: "wifisignal.png"
     },
     {
@@ -396,7 +396,7 @@ export const apps = {
       tags: ["Setapp", "Paid"],
       setupSince: "2024",
       delightMeter: 7,
-      site: "https://teleprompter.app",
+      site: "https://setapp.com/apps/teleprompter-app",
       img: "teleprompter.png"
     }
   ]
