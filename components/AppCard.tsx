@@ -115,8 +115,10 @@ export default function AppCard({ app }: AppCardProps) {
               hover:rotate-180 transform-gpu cursor-pointer" 
             />
             {/* Tooltip */}
-            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-white/95 text-gray-800 text-sm font-work-sans rounded-lg shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500 whitespace-nowrap z-30 pointer-events-none">
-              This is one of Gary's all-time favorites!
+            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-white/95 text-gray-800 text-sm font-work-sans rounded-lg shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-30 pointer-events-none text-center w-24 md:w-44">
+              <div className="leading-tight">
+                This is one of Gary's all-time favorites!
+              </div>
               {/* Tooltip arrow */}
               <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white"></div>
             </div>
