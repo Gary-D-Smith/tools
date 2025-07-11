@@ -2,6 +2,7 @@
 import { Work_Sans as WorkSans, Crimson_Pro as CrimsonPro } from "next/font/google"
 import Hero from "@/components/hero"
 import ProductivityApps from "@/components/productivity-apps"
+import Footer from "@/components/footer"
 import { cn } from "@/lib/utils"
 
 const workSans = WorkSans({
@@ -25,6 +26,7 @@ export default function Home() {
     >
       <Hero />
       <ProductivityApps />
+      <Footer />
     </div>
   )
 }

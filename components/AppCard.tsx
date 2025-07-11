@@ -210,7 +210,7 @@ export default function AppCard({ app }: AppCardProps) {
         </div>
 
         {/* Delight Meter */}
-        <div className="w-[110%] flex flex-col items-center group relative">
+        <div className="w-full flex flex-col items-center group relative">
           <div className="w-full bg-[#5B5B5B] rounded-2xl rounded-b-xl pb-1 px-1 flex flex-col shadow-inner cursor-pointer">
             <div className="flex items-center justify-between mb-1 text-sm font-crimson italic text-white px-4">
               <span className=" text-[15px]">Delight-O-Meter</span>
