@@ -3,29 +3,37 @@ import React from "react";
 export default function EveryoneWavyUnderline({ className }: { className?: string }) {
   const strokeWidth = 4;
   return (
-    <div className={className ? className + " relative" : "relative"}>
-      <svg viewBox="0 0 100 12" className="w-[100%] h-4 md:h-6" preserveAspectRatio="none">
+    <div className={(className ? className + " " : "") + "relative opacity-70"}>
+      <svg
+        viewBox="0 0 100 12"
+        className="w-[100%] h-4 md:h-6"
+        preserveAspectRatio="none"
+      >
         <defs>
-          <linearGradient id="flowingRainbow" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#FF6B6B" />
-            <stop offset="16.7%" stopColor="#FF8E53" />
-            <stop offset="33.3%" stopColor="#FFD93D" />
-            <stop offset="50%" stopColor="#6BCF7F" />
-            <stop offset="66.7%" stopColor="#45B7D1" />
-            <stop offset="83.3%" stopColor="#A685FF" />
-            <stop offset="100%" stopColor="#EA5CFF" />
-            <animateTransform
-              attributeName="gradientTransform"
-              type="translate"
-              from="0 0" to="20 0"
-              dur="20s"
-              repeatCount="indefinite"
-            />
+          <linearGradient id="flowingRainbow" x1="0%" y1="0%" x2="200%" y2="0%">
+            <stop offset="0%" stopColor="#FB4C54">
+              <animate attributeName="offset" values="-1;1" dur="8s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="16.6%" stopColor="#FE4D11">
+              <animate attributeName="offset" values="-0.833;1.166" dur="8s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="33.3%" stopColor="#FFB900">
+              <animate attributeName="offset" values="-0.666;1.333" dur="8s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="50%" stopColor="#27BB5D">
+              <animate attributeName="offset" values="-0.5;1.5" dur="8s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="66.6%" stopColor="#5074FE">
+              <animate attributeName="offset" values="-0.333;1.666" dur="8s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="83.3%" stopColor="#AE69FA">
+              <animate attributeName="offset" values="-0.166;1.833" dur="8s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" stopColor="#FB4C54">
+              <animate attributeName="offset" values="0;2" dur="8s" repeatCount="indefinite" />
+            </stop>
           </linearGradient>
         </defs>
-        {/* Left circle cap */}
-        <circle cx="0" cy="6" r={strokeWidth / 2} fill="url(#flowingRainbow)" />
-        {/* Animated wave */}
         <path
           stroke="url(#flowingRainbow)"
           strokeWidth={strokeWidth}
@@ -45,8 +53,6 @@ export default function EveryoneWavyUnderline({ className }: { className?: strin
             "
           />
         </path>
-        {/* Right circle cap */}
-        <circle cx="100" cy="6" r={strokeWidth / 2} fill="url(#flowingRainbow)" />
       </svg>
     </div>
   );

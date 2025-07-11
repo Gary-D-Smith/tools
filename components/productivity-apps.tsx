@@ -6,16 +6,17 @@ import ToolTypeHeroBadge from "./ToolTypeHeroBadge"
 
 export default function ProductivityApps() {
   return (
-    <section className="px-4 py-16 max-w-7xl mx-auto">
-      <div className="mb-8">
+    <section className="p-16 mx-auto">
+      <div className="-mb-8">
         <ToolTypeHeroBadge 
           label="Productivity" 
           className="bg-[#FE4D11] border-[#B1360F]" 
           showComingSoon={false}
+          size="xl"
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 bg-[#FFFBEB] p-16 rounded-3xl">
         {apps.mustHave.map((app, index) => (
           <AppCard key={index} app={app} />
         ))}
@@ -52,7 +53,7 @@ function AppCard({ app }: { app: App }) {
         <img
           src={`/app-images/${app.img}`}
           alt={app.name}
-          className="w-32 h-32 object-contain border-gray-200 bg-white"
+          className="w-28 h-38 object-contain border-gray-200 bg-white"
         />
       </div>
       {/* App Name */}
@@ -62,7 +63,7 @@ function AppCard({ app }: { app: App }) {
         <div className="absolute text-center w-full font-work-sans font-semibold text-sm rounded-tr-lg rounded-tl-lg h-5 bg-[#EEEDEB] text-[#9e9c99]">
           For When:
         </div>
-        <div className="w-full rounded-2xl border border-black/10 p-4 pb-2 pt-6 text-center font-crimson text-xl leading-tight">
+        <div className="w-full rounded-2xl border border-black/10 p-4 pb-2 pt-6 text-center font-crimson font-medium text-xl leading-tight">
           {capitalizeFirst(app.useCase)}
         </div>
       </div>

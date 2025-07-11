@@ -14,7 +14,7 @@ export const apps = {
       tags: ["Free"],
       setupSince: "2022",
       delightMeter: 8,
-      icon: "R",
+      site: "https://raycast.com",
       img: "raycast.png"
     },
     {
@@ -30,7 +30,7 @@ export const apps = {
       tags: ["Paid", "Setapp"],
       setupSince: "2019",
       delightMeter: 10,
-      icon: "C",
+      site: "https://cleanshot.com",
       img: "cleanshot-x.png"
     },
     {
@@ -38,20 +38,20 @@ export const apps = {
       description: "Organizing your menu bar.",
       useCase: "your menu bar looks like Times Square and you just want peace.",
       features: [
-        "Organizing menu bar icons into primary/secondary rows",
+        "Organizing menu bar sites into primary/secondary rows",
         "Adding spacers for clarity",
         "Hiding what I don't need until I need it"
       ],
       tags: ["Paid", "Setapp"],
       setupSince: "2019",
       delightMeter: 7,
-      icon: "B",
+      site: "https://www.macbartender.com",
       img: "bartender.png"
     },
     {
       name: "One Switch",
       description: "Quick toggles for common system actions.",
-      useCase: "you need to wipe your computer down but don't want to shut down your whole universe to do it.",
+      useCase: "You need to clean your screen, but closing everything is not an option.",
       features: [
         "Quick toggles: show hidden files, enable screen clean mode, prevent sleep",
         "Amphetamine is a solid free alternative"
@@ -59,7 +59,7 @@ export const apps = {
       tags: ["Paid", "Setapp"],
       setupSince: "2020",
       delightMeter: 5,
-      icon: "O",
+      site: "https://fireball.studio/oneswitch",
       img: "oneswitch.png"
     },
     {
@@ -74,7 +74,7 @@ export const apps = {
       tags: ["Paid", "Setapp"],
       setupSince: "2019",
       delightMeter: 15,
-      icon: "S",
+      site: "https://www.apptorium.com/sidenotes",
       img: "sidenotes.png"
     },
     {
@@ -89,7 +89,7 @@ export const apps = {
       tags: ["Freemium"],
       setupSince: "2017",
       delightMeter: 10,
-      icon: "F",
+      site: "https://flexibits.com/fantastical",
       img: "fantastical.png"
     },
     {
@@ -104,13 +104,13 @@ export const apps = {
       tags: ["Paid"],
       setupSince: "2019",
       delightMeter: 10,
-      icon: "U",
+      site: "https://unclutterapp.com",
       img: "unclutter.png"
     },
     {
       name: "Downie",
       description: "Download videos from sites that don't want you to.",
-      useCase: "you need to download something… and the site really doesn't want you to.",
+      useCase: "You need to download something, but the site's fighting you.",
       features: [
         "Downloading YouTube videos, audio clips, and Instagram posts",
         "Works like magic on stuff with no download button"
@@ -118,7 +118,7 @@ export const apps = {
       tags: ["Setapp", "Paid"],
       setupSince: "2019",
       delightMeter: 6,
-      icon: "D",
+      site: "https://software.charliemonroes.com/downie",
       img: "downie.png"
     },
     {
@@ -132,7 +132,7 @@ export const apps = {
       tags: ["Free"],
       setupSince: "2018",
       delightMeter: 7,
-      icon: "R",
+      site: "https://rectangleapp.com",
       img: "rectangle.png"
     }
   ],
@@ -150,7 +150,7 @@ export const apps = {
       tags: ["Freemium", "Setapp"],
       setupSince: "2024",
       delightMeter: 10,
-      icon: "C",
+      site: "https://craft.do",
       img: "craft.png"
     },
     {
@@ -164,7 +164,7 @@ export const apps = {
       tags: ["Setapp", "Paid"],
       setupSince: "2022",
       delightMeter: 4,
-      icon: "D",
+      site: "https://devutils.app",
       img: "devutils.png"
     },
     {
@@ -179,7 +179,7 @@ export const apps = {
       tags: ["Setapp", "Paid"],
       setupSince: "2022",
       delightMeter: 4,
-      icon: "D",
+      site: "https://diagrams.app",
       img: "diagrams.png"
     },
     {
@@ -193,7 +193,7 @@ export const apps = {
       tags: ["Setapp", "Paid"],
       setupSince: "2021",
       delightMeter: 6,
-      icon: "G",
+      site: "https://glyphsapp.com/glyphs-mini",
       img: "glyphsmini.png"
     },
     {
@@ -207,7 +207,7 @@ export const apps = {
       tags: ["Setapp", "Paid"],
       setupSince: "2023",
       delightMeter: 5,
-      icon: "Q",
+      site: "https://quicklens.app",
       img: "quicklens.png"
     },
     {
@@ -221,7 +221,7 @@ export const apps = {
       tags: ["Setapp", "Paid"],
       setupSince: "2023",
       delightMeter: 5,
-      icon: "W",
+      site: "https://wifisignal.app",
       img: "wifisignal.png"
     },
     {
@@ -236,7 +236,7 @@ export const apps = {
       tags: ["Setapp", "Paid"],
       setupSince: "2024",
       delightMeter: 7,
-      icon: "T",
+      site: "https://teleprompter.app",
       img: "teleprompter.png"
     }
   ],
@@ -254,7 +254,7 @@ export const apps = {
       tags: ["Free"],
       setupSince: "2018",
       delightMeter: 5,
-      icon: "I",
+      site: "https://iina.io",
       img: "iina.png"
     },
     {
@@ -269,7 +269,7 @@ export const apps = {
       tags: ["Setapp", "Paid"],
       setupSince: "2019",
       delightMeter: 5,
-      icon: "P",
+      site: "https://software.charliemonroes.com/permute",
       img: "permute.png"
     },
     {
@@ -284,7 +284,7 @@ export const apps = {
       tags: ["Free"],
       setupSince: "2021",
       delightMeter: 6,
-      icon: "C",
+      site: "https://www.coconut-flavour.com/coconutbattery",
       img: "coconutbattery.png"
     },
     {
@@ -299,7 +299,7 @@ export const apps = {
       tags: ["Paid", "Setapp"],
       setupSince: "2023",
       delightMeter: 8,
-      icon: "P",
+      site: "https://pdfsearch.app",
       img: "pdfsearch.png"
     },
     {
@@ -314,7 +314,7 @@ export const apps = {
       tags: ["Paid", "Setapp"],
       setupSince: "2021",
       delightMeter: 6,
-      icon: "P",
+      site: "https://pdfsqueezer.com",
       img: "pdfsqueezer.png"
     },
     {
@@ -329,7 +329,7 @@ export const apps = {
       tags: ["Paid", "Setapp"],
       setupSince: "2024",
       delightMeter: 6,
-      icon: "T",
+      site: "https://tripmode.ch",
       img: "tripmode.png"
     },
     {
@@ -344,7 +344,7 @@ export const apps = {
       tags: ["Paid", "Setapp"],
       setupSince: "2019",
       delightMeter: 7,
-      icon: "V",
+      site: "https://vivid.lol",
       img: "vivid.png"
     },
     {
@@ -359,7 +359,7 @@ export const apps = {
       tags: ["Free"],
       setupSince: "2017",
       delightMeter: 4,
-      icon: "A",
+      site: "https://freemacsoft.net/appcleaner",
       img: "appcleaner.png"
     },
     {
@@ -374,7 +374,7 @@ export const apps = {
       tags: ["Setapp", "Paid"],
       setupSince: "2019",
       delightMeter: 9,
-      icon: "C",
+      site: "https://macpaw.com/cleanmymac",
       img: "cleanmymac.png"
     },
     {
@@ -389,7 +389,7 @@ export const apps = {
       tags: ["Free", "Setapp"],
       setupSince: "2017",
       delightMeter: 10,
-      icon: "H",
+      site: "https://handmirror.app",
       img: "handmirror.png"
     }
   ]

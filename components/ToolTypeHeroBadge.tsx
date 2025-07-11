@@ -4,12 +4,14 @@ interface ToolTypeHeroBadgeProps {
   label: string;
   className: string; // Tailwind classes
   showComingSoon?: boolean; // Whether to show "Coming soon" tooltip
+  size?: "normal" | "xl"; // Size prop with normal (lg) and xl options
 }
 
 const ToolTypeHeroBadge: React.FC<ToolTypeHeroBadgeProps> = ({ 
   label, 
   className, 
-  showComingSoon = true 
+  showComingSoon = true,
+  size = "normal"
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -34,6 +36,15 @@ const ToolTypeHeroBadge: React.FC<ToolTypeHeroBadgeProps> = ({
 
   const glowColor = getGlowColor();
 
+  // Size-based classes
+  const getSizeClasses = () => {
+    if (size === "xl") {
+      return "px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 lg:px-10 lg:py-5 border-3 sm:border-4 md:border-5 lg:border-6 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl rounded-xl sm:rounded-2xl md:rounded-3xl";
+    }
+    // normal size (default)
+    return "px-3 py-1 sm:px-4 sm:py-1.5 md:px-5 md:py-2 lg:px-6 lg:py-2 border-2 sm:border-3 md:border-4 text-lg sm:text-xl md:text-2xl lg:text-3xl rounded-lg sm:rounded-xl";
+  };
+
   return (
     <div className="relative">
       <div
@@ -41,9 +52,10 @@ const ToolTypeHeroBadge: React.FC<ToolTypeHeroBadgeProps> = ({
         onMouseLeave={() => setIsHovered(false)}
         onMouseMove={handleMouseMove}
         className={`
-          inline-block px-3 py-1 sm:px-4 sm:py-1.5 md:px-5 md:py-2 lg:px-6 lg:py-2 border-2 sm:border-3 md:border-4 font-work-sans font-semibold text-white text-lg sm:text-xl md:text-2xl lg:text-3xl rounded-lg sm:rounded-xl shadow-md overflow-hidden 
+          inline-block font-work-sans font-semibold text-white rounded-lg shadow-md overflow-hidden 
           transition-all duration-300 ease-out cursor-pointer select-none
           hover:scale-105 sm:hover:scale-110 hover:shadow-2xl z-20
+          ${getSizeClasses()}
           ${className}
         `}
         style={{
@@ -55,7 +67,11 @@ const ToolTypeHeroBadge: React.FC<ToolTypeHeroBadgeProps> = ({
         {/* Exclamation mark background */}
         <span
           aria-hidden
-          className="absolute right-1 top-5 xl:top-6 -translate-y-1/2 text-2xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl text-white/25 font-medium italic pointer-events-none select-none"
+          className={`absolute right-1 top-5 xl:top-6 -translate-y-1/2 text-white/25 font-medium italic pointer-events-none select-none ${
+            size === "xl" 
+              ? "text-3xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl" 
+              : "text-2xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl"
+          }`}
         >
           !
         </span>
