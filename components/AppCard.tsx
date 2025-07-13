@@ -191,19 +191,25 @@ export default function AppCard({ app }: AppCardProps) {
           <span className="flex items-center gap-1">
             <span 
               className={`font-bold px-2 py-0 rounded-md tracking-wide shadow-inner text-sm opacity-70 ${
-                app.setupSince === '2019' 
-                  ? 'text-white bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 shadow-lg' // Amber
-                  : app.setupSince === '2020'
-                  ? 'text-white bg-gradient-to-r from-gray-300 via-gray-400 to-gray-500 shadow-lg' // Grey
-                  : app.setupSince === '2021'
-                  ? 'text-white bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 shadow-lg' // Amber
-                  : app.setupSince === '2022'
-                  ? 'text-white bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 shadow-lg' // Amber
-                  : app.setupSince === '2023'
-                  ? 'text-white bg-gradient-to-r from-gray-300 via-gray-400 to-gray-500 shadow-lg' // Grey
-                  : app.setupSince === '2024'
-                  ? 'text-white bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 shadow-lg' // Amber
-                  : 'text-white bg-[#8E8C8C]' // Default gray for other years
+                (() => {
+                  const currentYear = new Date().getFullYear();
+                  const setupYear = parseInt(app.setupSince);
+                  const yearsSinceSetup = currentYear - setupYear;
+                  const yearsSince2017 = setupYear - 2017;
+                  
+                  // Gold for oldest years (2017-2019)
+                  if (yearsSince2017 <= 2) {
+                    return 'text-white bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 shadow-lg';
+                  }
+                  
+                  // Bronze for recent years (within 2 years of current)
+                  if (yearsSinceSetup <= 2) {
+                    return 'text-white bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 shadow-lg';
+                  }
+                  
+                  // Silver for everything else
+                  return 'text-white bg-gradient-to-r from-gray-300 via-gray-400 to-gray-500 shadow-lg';
+                })()
               }`}
             >
               {app.setupSince}
@@ -212,7 +218,7 @@ export default function AppCard({ app }: AppCardProps) {
         </div>
 
         {/* Delight Meter */}
-        <div className="w-full flex flex-col items-center group relative">
+        <div className="w-full flex flex-col items-center group relative pb-2">
           <div className="w-full bg-[#5B5B5B] rounded-2xl rounded-b-xl pb-1 px-1 flex flex-col shadow-inner cursor-pointer">
             <div className="flex items-center justify-between mb-1 text-sm font-crimson italic text-white px-4">
               <span className=" text-[15px]">Delight-O-Meter</span>
