@@ -1,4 +1,4 @@
-export const apps = {
+export const productivity_apps = {
   shouldHave: [
     {
       name: "Vivid",
@@ -319,7 +319,7 @@ export const apps = {
       useCase: "you want to make a font and live your typographic dreams.",
       features: [
         "Designing fonts from scratch, copy and paste things in from Illustrator",
-        "Made two fonts inspired by 1990s–2000s certificates 👉 Download them here"
+        "Made two fonts inspired by 1990s–2000s certificates"
       ],
       tags: ["Setapp", "Paid"],
       setupSince: "2021",

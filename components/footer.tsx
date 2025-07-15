@@ -1,7 +1,11 @@
 export default function Footer() {
   return (
     <footer className="w-full pb-12 px-4">
-      <div className="max-w-4xl mx-auto flex flex-col items-center gap-3">
+      <div className="max-w-4xl mx-auto flex flex-col items-center gap-6">
+        <div className="text-center text-white/80 font-work-sans text-lg leading-relaxed">
+          Hey there! Wow. Thanks for making it all the way down here.
+        </div>
+        
         <div className="flex items-center gap-3 text-white font-work-sans">
           <span className="text-lg">Made with</span>
           <span className="text-2xl animate-pulse">🧡</span>

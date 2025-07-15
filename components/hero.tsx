@@ -2,12 +2,12 @@ import ToolTypeHeroBadge from "./ToolTypeHeroBadge"
 import EveryoneWavyUnderline from "./EveryoneWavyUnderline"
 
 const tags = [
-  { name: "References", color: "bg-[#FB4C54] border-[#CD2A33]", glowColor: "#FB4C54" },
-  { name: "Creativity", color: "bg-[#AE69FA] border-[#7D4BB3]", glowColor: "#AE69FA" },
-  { name: "Productivity", color: "bg-[#FE4D11] border-[#B1360F]", glowColor: "#FE4D11" },
-  { name: "Organization", color: "bg-[#5074FE] border-[#3851B1]", glowColor: "#5074FE" },
-  { name: "Tactile Tools", color: "bg-[#FFB900] border-[#C28D00]", glowColor: "#FFB900" },
-  { name: "Extensions", color: "bg-[#27BB5D] border-[#1D8240]", glowColor: "#27BB5D" },
+  { name: "References", color: "bg-[#27BB5D] border-[#1A8A47]", glowColor: "#27BB5D", href: "#references" },
+  { name: "Creativity", color: "bg-[#FFB900] border-[#B38A0A]", glowColor: "#FFB900", href: "#creativity" },
+  { name: "Productivity", color: "bg-[#FE4D11] border-[#B1360F]", glowColor: "#FE4D11", href: "#productivity" },
+  { name: "Organization", color: "bg-[#5074FE] border-[#3851B1]", glowColor: "#5074FE", href: "#organization" },
+  { name: "Tactile Tools", color: "bg-[#FB4C54] border-[#CD2A33]", glowColor: "#FB4C54" },
+  { name: "Extensions", color: "bg-[#AE69FA] border-[#7B4BB3]", glowColor: "#AE69FA", href: "#extensions" },
 ]
 
 export default function Hero() {
@@ -20,27 +20,30 @@ export default function Hero() {
           <ToolTypeHeroBadge
             label={tags[0].name}
             className={`${tags[0].color} absolute left-[5%] top-[20vh] rotate-[-4deg] md:top-[25vh] md:left-[4%] lg:left-[5%] lg:rotate-[-10deg] lg:top-[65vh]`}
-            showComingSoon={true}
+            showComingSoon={false}
             glowColor={tags[0].glowColor}
+            href={tags[0].href}
           />
           <ToolTypeHeroBadge
             label={tags[1].name}
             className={`${tags[1].color} absolute right-[5%] top-[20vh] rotate-[4deg] md:top-[25vh] md:right-[4%] lg:right-[5%] lg:rotate-[10deg] lg:top-[65vh]`}
-            showComingSoon={true}
+            showComingSoon={false}
             glowColor={tags[1].glowColor}
+            href={tags[1].href}
           />
           <ToolTypeHeroBadge
             label={tags[2].name}
             className={`${tags[2].color} absolute left-[10%] rotate-[-3deg] top-[12.5vh] md:top-[15vh] md:left-[8%] lg:left-[6%] lg:rotate-[-6deg] lg:top-[35vh]`}
             showComingSoon={false}
             glowColor={tags[2].glowColor}
-            href="#productivity"
+            href={tags[2].href}
           />
           <ToolTypeHeroBadge
             label={tags[3].name}
             className={`${tags[3].color} absolute right-[10%] rotate-[3deg] top-[12.5vh] md:top-[15vh] md:right-[8%] lg:right-[6%] lg:rotate-[6deg] lg:top-[35vh]`}
-            showComingSoon={true}
+            showComingSoon={false}
             glowColor={tags[3].glowColor}
+            href={tags[3].href}
           />
           <ToolTypeHeroBadge
             label={tags[4].name}
@@ -51,8 +54,9 @@ export default function Hero() {
           <ToolTypeHeroBadge
             label={tags[5].name}
             className={`${tags[5].color} absolute right-[13%] rotate-[3deg] top-[5vh] md:right-[22%] lg:right-[25%] lg:rotate-[3deg] lg:top-[8vh]`}
-            showComingSoon={true}
+            showComingSoon={false}
             glowColor={tags[5].glowColor}
+            href={tags[5].href}
           />
         </div>
 

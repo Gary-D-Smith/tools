@@ -1,16 +1,16 @@
-import { productivity_apps } from "@/lib/productivity-data"
+import { organization_apps } from "@/lib/organization-data"
 import ToolTypeSectionTitle from "./ToolTypeSectionTitle"
 import AppCard from "./AppCard"
 
-export default function ProductivityApps() {
+export default function OrganizationApps() {
   return (
-    <section id="productivity" className="p-8 lg:p-16 mx-auto">
+    <section id="organization" className="p-8 lg:p-16 mx-auto">
       <div className="-mb-8 -ml-4 w-min">
         <ToolTypeSectionTitle
-          label="Productivity"
-          className="bg-[#FE4D11] border-[#B1360F]"
+          label="Organization"
+          className="bg-[#5074FE] border-[#3851B1]"
           showComingSoon={false}
-          glowColor="#FE4D11"
+          glowColor="#5074FE"
         />
       </div>
 
@@ -19,7 +19,7 @@ export default function ProductivityApps() {
         <h2 className="font-crimson font-medium text-5xl text-left w-full text-gray-900 col-span-full pt-4 lg:pt-0">
           Must Have:
         </h2>
-        {productivity_apps.mustHave.map((app, index) => (
+        {organization_apps.mustHave.map((app, index) => (
           <AppCard key={index} app={app} />
         ))}
 
@@ -28,7 +28,7 @@ export default function ProductivityApps() {
         <h2 className="font-crimson font-medium text-5xl text-left w-full text-gray-900 col-span-full pt-4 lg:pt-0">
           Should Have:
         </h2>
-        {productivity_apps.shouldHave.map((app, index) => (
+        {organization_apps.shouldHave.map((app, index) => (
           <AppCard key={index} app={app} />
         ))}
 
@@ -37,7 +37,7 @@ export default function ProductivityApps() {
         <h2 className="font-crimson font-medium text-5xl text-left w-full text-gray-900 col-span-full pt-4 lg:pt-0">
           Nice to Have:
         </h2>
-        {productivity_apps.nicheHave.map((app, index) => (
+        {organization_apps.nicheHave.map((app, index) => (
           <AppCard key={index} app={app} />
         ))}
 
@@ -45,4 +45,4 @@ export default function ProductivityApps() {
 
     </section>
   )
-}
+} 

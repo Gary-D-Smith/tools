@@ -4,7 +4,7 @@ import { FiStar } from "react-icons/fi";
 
 interface App {
   name: string
-  description: string
+  description?: string
   useCase: string
   features: string[]
   tags: string[]
@@ -174,7 +174,7 @@ export default function AppCard({ app }: AppCardProps) {
             {app.features.map((feature, idx) => (
               <li key={idx} className="text-[#5d5b56] text-[13px] leading-tight pl-4 relative">
                 <span className="absolute left-0 text-xl top-[-5px]">•</span>
-                <span className="block">{feature}</span>
+                <span className="block">{feature.endsWith('.') ? feature : `${feature}.`}</span>
               </li>
             ))}
           </ul>
