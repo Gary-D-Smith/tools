@@ -21,4 +21,4 @@ export default function ExtensionsApps() {
       </div>
     </section>
   )
-} 
+}
