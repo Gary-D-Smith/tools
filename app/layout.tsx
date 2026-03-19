@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Work_Sans as WorkSans, Crimson_Pro as CrimsonPro } from "next/font/google"
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const workSans = WorkSans({
@@ -80,6 +81,7 @@ export default function RootLayout({
       </head>
       <body className="bg-black antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   )
